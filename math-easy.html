@@ -14,10 +14,22 @@
 
     <p>If A = [ [2, 1], [3, 4] ], what is the determinant of A?</p>
 
-    <button>3</button>
-    <button>5</button>
-    <button>8</button>
-    <button>11</button>
+    <button onclick="checkAnswer(this, false)">3</button>
+<button onclick="checkAnswer(this, true)">5</button>
+<button onclick="checkAnswer(this, false)">8</button>
+<button onclick="checkAnswer(this, false)">11</button>
+
+<p id="result"></p>
+
+<script>
+    function checkAnswer(button, correct) {
+        if (correct) {
+            document.getElementById("result").innerHTML = "Correct! ✅";
+        } else {
+            document.getElementById("result").innerHTML = "Wrong! ❌";
+        }
+    }
+</script>
 
     <br><br>
 
